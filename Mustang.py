@@ -10,6 +10,6 @@ class Vehicle:
 
 
     def race(self):
-        Dice_roll = random.randrange(1,12)
+        Dice_roll = random.randrange(2,12)
         return self.Body + self.Enginesize + self.HP * Dice_roll
     
