@@ -7,7 +7,7 @@ car2 = Vehicle("2023 Ford Mustang GT500", 760, 8, 100)
 car3 = Vehicle("2023 Chevrolet Camero ZL1", 650, 8, 100)
 car4 = Vehicle("2023 Dodge Charger Hellcat", 807, 8, 100)
 
-
+#Lets the user choose the vehicle to race with
 def driver_1():
     print("\nPress 1 - 2023 DODGE CHALLENGER SRT, 807, 8, 100")
     print("\nPress 2 - 2023 FORD MUSTANG SHELBY GT500, 760, 8, 100")
@@ -32,7 +32,7 @@ def driver_1():
         print("==================\n==================")
         return
 
-
+#Lets the user choose the vehicle they want to go against
 def driver_2():
     print("\nPress 1 - 2023 DODGE CHALLENGER SRT, 807, 8, 100")
     print("\nPress 2 - 2023 FORD MUSTANG SHELBY GT500, 760, 8, 100")
@@ -59,7 +59,7 @@ def driver_2():
     
 def main():
     num_races = 1
-    while num_races < 6:
+    while num_races < 6: # editable number of races
 
         racer1 = driver_1()
         racer2 = driver_2()
@@ -76,7 +76,7 @@ def main():
         score = 0
 
         print(f"race {num_races}")
-    
+        #runs the function race depending on which vehicle chosen 
         for car in cars:
             score = car.race()
             print("======================================================")
@@ -90,7 +90,7 @@ def main():
         print("\n======================================================")
         print("\n3\n\n2\n\n1\n\nGOOOOOOOO!!!\n")
         print("======================================================")
-
+        #the score of each race decides if the user lost/won
         if score < 2000:
             print("CRITICAL LOSS")
         elif score < 4000 and score > 2000:
@@ -105,8 +105,8 @@ def main():
         print (f"\nWINNER IS {winner.name} WITH THE SCORE OF {Race_score}\n\n")
     
     print("======================================================")
-    print("==================THANKS FOR PLAYING=================")
-    print("================Professor Sara Shaheen===============")
+    print("==================THANKS FOR PLAYING==================")
+    print("================Professor Sara Shaheen================")
     print("======================================================")
     print("========================/\    /\======================")
     print("=======================/ P\  / 4\=====================")
