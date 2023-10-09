@@ -7,8 +7,30 @@ car2 = Vehicle("2023 Ford Mustang GT500", 760, 8, 100)
 car3 = Vehicle("2023 Chevrolet Camero ZL1", 650, 8, 100)
 car4 = Vehicle("2023 Dodge Charger Hellcat", 807, 8, 100)
 
+#MAIN MENU
+def mainmenu():
+    username = input("\nENTER USER NAME? ")
+    print("\nWELCOME TO THE RACE " + username)
+    start = input("\nWOULD YOU LIKE TO START THE RACE " + username + " TYPE YES OR NO: ")
+
+    if start == "yes" or start == "YES":
+        print("\n======================================================")
+        print("\n RACE IS ON")
+        print("\n======================================================")
+    elif start == "no" or start == "NO":
+        print("YOU HAVE QUIT THE GAME")
+        exit()
+    else:
+        print("\nINVALID\n")
+        exit()
+menu = mainmenu()
+
+
+
+
 #Lets the user choose the vehicle to race with
 def driver_1():
+
     print("\nPress 1 - 2023 DODGE CHALLENGER SRT, 807, 8, 100")
     print("\nPress 2 - 2023 FORD MUSTANG SHELBY GT500, 760, 8, 100")
     print("\nPress 3 - 2023 CHEVROLET CAMERO ZL1, 650, 8, 100")
@@ -28,12 +50,14 @@ def driver_1():
         return car4
     else:
         print("==================\n==================")
-        print("Invalid Entery!!!")
+        print("Invalid Entry!!!")
         print("==================\n==================")
         return
 
 #Lets the user choose the vehicle they want to go against
 def driver_2():
+    
+
     print("\nPress 1 - 2023 DODGE CHALLENGER SRT, 807, 8, 100")
     print("\nPress 2 - 2023 FORD MUSTANG SHELBY GT500, 760, 8, 100")
     print("\nPress 3 - 2023 CHEVROLET CAMERO ZL1, 650, 8, 100")
@@ -66,7 +90,7 @@ def main():
 
         if racer1 == racer2:
             print("\n==================================================")
-            print("\n!!!SAME VEHICLES ARE NOT ALLOWED TO RACE!!!")
+            print("\n!!!SAME VEHICLES ARE NOT ALLOWED TO RACE!!!") #user cannot race with the same vehicle
             print("\n==================================================")
             continue
         
@@ -104,17 +128,19 @@ def main():
         print ("\nRACE IS OVER")
         print (f"\nWINNER IS {winner.name} WITH THE SCORE OF {Race_score}\n\n")
     
-    print("======================================================")
+    print("\n======================================================")
     print("==================THANKS FOR PLAYING==================")
     print("================Professor Sara Shaheen================")
     print("======================================================")
-    print("========================/\    /\======================")
-    print("=======================/ P\  / 4\=====================")
-    print("=======================\ R \/  0/=====================")
-    print("========================\ O   0/======================")
-    print("=========================\ G 0/=======================")
-    print("==========================\ 1/========================")
-    print("===========================\/=========================")
+    print("=========================/\====/\=====================")
+    print("========================/  \  /  \====================")
+    print("=======================/ P  \/  4 \===================")
+    print("=======================\ R  \/  0 /===================")
+    print("========================\ O    0 /====================")
+    print("=========================\ G  0 /=====================")
+    print("==========================\  1 /======================")
+    print("===========================\  /=======================")
+    print("============================\/========================")
     print("======================================================")
     print("===================Ghaleb Abualhaija==================")
     print("======================================================")
